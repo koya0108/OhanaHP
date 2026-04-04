@@ -5,21 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>オハナ | 訪問看護ステーション</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- font-->
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <!-- ===== ヘッダー ===== -->
     <header>
       <div class="header-inner">
-        <h1 class="logo">オハナ</h1>
+        <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="オハナ訪問看護ステーションのロゴ"></a></h1>
+
         <nav class="nav">
-          <ul>
-            <li>特徴</li>
-            <li>サービス</li>
-            <li>スタッフ</li>
-            <li>お問い合わせ</li>
+          <ul class="nav-list">
+            <li><a href="./index.html#features">オハナの特徴</a></li>
+            <li><a href="./index.html#flow">ご利用の流れ</a></li>
+            <li><a href="./index.html#staff">スタッフ紹介</a></li>
+            <li><a href="./recruit.html">採用情報</a></li>
           </ul>
         </nav>
+        
+        <a href="./index.html#contact" class="header-contact-btn">お問い合わせ</a>
       </div>
     </header>
 
@@ -29,81 +36,93 @@
       <!-- ファーストビュー -->
       <section class="hero">
         <div class="hero-inner">
-          <h2>ご自宅で安心できる看護を</h2>
-          <p>オハナ訪問看護ステーション</p>
+          <h2>家族のように想い、支え合う看護を</h2>
+          <p>オハナ訪問看護ステーション<span class="num">2O26</span></p>
         </div>
       </section>
 
       <!-- 特徴 -->
-      <section class="features">
-        <h2>オハナの特徴</h2>
+      <section id="features" class="features">
+        <div class="container">
+          <h2>オハナの特徴</h2>
 
-        <div class="features-list">
-          <div class="feature-card">
-            <h3>特徴01</h3>
-            <p>説明テキスト</p>
-          </div>
+          <div class="features-list">
+            <div class="feature-card">
+              <h3>特徴01</h3>
+              <p>説明テキスト</p>
+            </div>
 
-          <div class="feature-card">
-            <h3>特徴02</h3>
-            <p>説明テキスト</p>
-          </div>
+            <div class="feature-card">
+              <h3>特徴02</h3>
+              <p>説明テキスト</p>
+            </div>
 
-          <div class="feature-card">
-            <h3>特徴03</h3>
-            <p>説明テキスト</p>
+            <div class="feature-card">
+              <h3>特徴03</h3>
+              <p>説明テキスト</p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- ご利用の流れ -->
-      <section class="flow">
-        <h2>ご利用の流れ</h2>
+      <section id="flow" class="flow">
+        <div class="container">
+          <h2>ご利用の流れ</h2>
 
-        <div class="flow-list">
-          <div class="flow-item">お問い合わせ</div>
-          <div class="flow-item">ご説明</div>
-          <div class="flow-item">ご契約</div>
-          <div class="flow-item">ご利用開始</div>
+          <div class="flow-list">
+            <div class="flow-item">お問い合わせ</div>
+            <div class="flow-item">ご説明</div>
+            <div class="flow-item">ご契約</div>
+            <div class="flow-item">ご利用開始</div>
+          </div>
         </div>
       </section>
 
       <!-- スタッフ紹介 -->
-      <section class="staff">
-        <h2>スタッフ紹介</h2>
+      <section id="staff" class="staff">
+        <div class="container">
+          <h2>スタッフ紹介</h2>
 
-        <div class="staff-list">
-          <div class="staff-card">
-            <p>スタッフ名</p>
-            <p>説明</p>
-          </div>
+          <div class="staff-list">
+            <div class="staff-card">
+              <p>スタッフ名</p>
+              <p>説明</p>
+            </div>
 
-          <div class="staff-card">
-            <p>スタッフ名</p>
-            <p>説明</p>
+            <div class="staff-card">
+              <p>スタッフ名</p>
+              <p>説明</p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- お問い合わせ -->
-      <section class="contact">
-        <h2>お問い合わせ</h2>
-        <p>お気軽にご相談ください</p>
-        <p class="tel">000-0000-0000</p>
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2>お問い合わせ</h2>
+          <p>まずはお気軽にお問合せ・ご相談ください！</p>
+          <p class="tel">
+            <a href="tel:00000000000">000-0000-0000</a>
+          </p>
+        </div>
       </section>
 
       <!-- FAQ -->
-      <section class="faq">
-        <h2>よくある質問</h2>
+      <section id="faq" class="faq">
+        <div class="container">
+          <h2>よくある質問</h2>
 
-        <div class="faq-item">
-          <p class="question">Q. 質問内容</p>
-          <p class="answer">A. 回答内容</p>
-        </div>
+          <div class="faq-item">
+            <p class="question">Q. 質問内容</p>
+            <p class="answer">A. 回答内容</p>
+          </div>
 
-        <div class="faq-item">
-          <p class="question">Q. 質問内容</p>
-          <p class="answer">A. 回答内容</p>
+          <div class="faq-item">
+            <p class="question">Q. 質問内容</p>
+            <p class="answer">A. 回答内容</p>
+          </div>
         </div>
       </section>
 

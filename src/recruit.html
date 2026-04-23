@@ -3,27 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>採用情報 | オハナ訪問看護ステーション</title>
+    <title>オハナ | 訪問看護ステーション</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- font-->
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <!-- ===== ヘッダー ===== -->
     <header>
       <div class="header-inner">
-        <h1 class="logo">
-          <a href="./index.html">オハナ</a>
-        </h1>
+        <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="オハナ訪問看護ステーションのロゴ"></a></h1>
 
         <nav class="nav">
-          <ul>
+          <ul class="nav-list">
             <li><a href="./index.html#features">オハナの特徴</a></li>
             <li><a href="./index.html#flow">ご利用の流れ</a></li>
             <li><a href="./index.html#staff">スタッフ紹介</a></li>
             <li><a href="./recruit.html">採用情報</a></li>
-            <li><a href="./index.html#contact">お問い合わせ</a></li>
           </ul>
         </nav>
+        
+        <a href="./index.html#contact" class="header-contact-btn">お問い合わせ</a>
       </div>
     </header>
 
@@ -33,25 +36,255 @@
         <div class="container">
           <h2>採用情報</h2>
 
-          <p>現在、看護師・スタッフを募集しております。</p>
+          <p class="recruit-intro">
+            訪問看護ステーションオハナでは、地域に寄り添う看護・リハビリを提供する仲間を積極的に募集しています！<br>
+            未経験大歓迎！
+          </p>
 
-          <div class="recruit-box">
-            <h3>募集要項</h3>
+          <div class="recruit-nav">
+            <a href="#fulltime">正社員</a>
+            <a href="#parttime">パートタイム</a>
           </div>
 
-          <div class="recruit-box">
-            <h3>応募方法</h3>
-            <p>お電話またはお問い合わせフォームよりご連絡ください。</p>
+          <!-- 正社員 -->
+          <div id="fulltime" class="recruit-section">
+            <h3 class="recruit-section-title">正社員</h3>
+
+            <!-- 看護師 -->
+            <div class="recruit-card">
+              <h4>看護師 / 准看護師</h4>
+
+              <div class="recruit-block">
+                <p class="recruit-label">募集要項</p>
+                <ul>
+                  <li>訪問看護業務全般（健康管理・医療処置・服薬管理など）</li>
+                  <li>ご利用者様・ご家族への支援、相談対応</li>
+                  <li>記録、報告書の作成</li>
+                </ul>
+                <p class="recruit-note">
+                  ※業務に慣れるまでは、相談しながら進められる体制を整えています。
+                  判断に迷う場面があれば、すぐに看護師や管理者へ相談できる環境です。
+                </p>
+              </div>
+
+              <div class="recruit-block">
+                <p class="recruit-label">待遇</p>
+                <ul>
+                  <li>月給：300,000円〜400,000円（経験・能力に応じて優遇）</li>
+                  <li>基本給：230,000円～330,000円</li>
+                  <li>資格手当：70,000円</li>
+                  <li>訪問手当：1件あたり500円</li>
+                  <li>昇給あり（売上に応じて）</li>
+                  <li>賞与あり（売上に応じて）</li>
+                  <li>オンコール・緊急訪問なし</li>
+                  <li>交通費支給（上限10,000円）</li>
+                  <li>勤務時間：9:00〜18:00（休憩1時間）</li>
+                  <li>休日：土日完全休み</li>
+                  <li>各種社会保険完備</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- セラピスト -->
+            <div class="recruit-card">
+              <h4>セラピスト（理学療法士・作業療法士）</h4>
+
+              <div class="recruit-block">
+                <p class="recruit-label">募集要項</p>
+                <ul>
+                  <li>利用者様の身体機能評価（ROM・筋力・歩行・ADLなど）</li>
+                  <li>目標に基づいた個別リハビリプログラムの立案・実施</li>
+                  <li>福祉用具・住宅環境への助言</li>
+                  <li>記録、報告書の作成</li>
+                </ul>
+                <p class="recruit-note">
+                  ※判断に迷う場面があれば、すぐに看護師や管理者へ相談できる環境です。
+                </p>
+              </div>
+
+              <div class="recruit-block">
+                <p class="recruit-label">待遇</p>
+                <ul>
+                  <li>月給：280,000円〜300,000円（経験・能力に応じて優遇）</li>
+                  <li>基本給：220,000円～240,000円</li>
+                  <li>資格手当：60,000円</li>
+                  <li>勤務時間：9:00〜18:00（休憩1時間）</li>
+                  <li>昇給あり（売上に応じて）</li>
+                  <li>賞与あり（売上に応じて）</li>
+                  <li>交通費支給（上限10,000円）</li>
+                  <li>休日：土日完全休み</li>
+                  <li>各種社会保険完備</li>
+                </ul>
+
+                <div class="recruit-subbox">
+                  <p class="recruit-subtitle">インセンティブ件数基準</p>
+                  <ul>
+                    <li>月70件まで：基本給内</li>
+                    <li>月71件～：800円／件</li>
+                    <li>月90件超：1,000円／件</li>
+                  </ul>
+                </div>
+
+                <div class="recruit-subbox">
+                  <p class="recruit-subtitle">想定年収シミュレーション</p>
+                  <ul>
+                    <li>
+                      <strong>ケース①：標準ペース（未経験～1年目）</strong><br>
+                      月80件訪問<br>
+                      インセンティブ：9件 × 800円 = 7,200円
+                    </li>
+                    <li>
+                      <strong>ケース②：慣れてきた2年目</strong><br>
+                      月100件訪問<br>
+                      インセンティブ：30件 × 800円 = 24,000円
+                    </li>
+                    <li>
+                      <strong>ケース③：やる気層</strong><br>
+                      月120件訪問<br>
+                      インセンティブ：50件 × 1,000円 = 50,000円
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- パートタイム -->
+          <div id="parttime" class="recruit-section">
+            <h3 class="recruit-section-title">パートタイム</h3>
+
+            <div class="recruit-card">
+              <h4>看護師</h4>
+
+              <div class="recruit-block">
+                <p class="recruit-label">募集要項</p>
+                <ul>
+                  <li>訪問看護業務全般</li>
+                  <li>勤務日数・時間はご相談ください</li>
+                </ul>
+              </div>
+
+              <div class="recruit-block">
+                <p class="recruit-label">待遇</p>
+                <ul>
+                  <li>詳細は面談時にご案内いたします</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="recruit-card">
+              <h4>セラピスト（理学療法士・作業療法士）</h4>
+
+              <div class="recruit-block">
+                <p class="recruit-label">募集要項</p>
+                <ul>
+                  <li>訪問リハビリ業務全般</li>
+                  <li>勤務日数・時間はご相談ください</li>
+                </ul>
+              </div>
+
+              <div class="recruit-block">
+                <p class="recruit-label">待遇</p>
+                <ul>
+                  <li>詳細は面談時にご案内いたします</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 応募方法 -->
+          <div class="recruit-section recruit-contact">
+            <h3 class="recruit-section-title">応募方法</h3>
+
+            <div class="recruit-card">
+              <p class="recruit-contact-lead">
+                下記の方法よりお気軽にお問い合わせください。<br>
+                訪問看護ステーションオハナ 管理者：近藤裕也
+              </p>
+
+              <div class="contact-item">
+                <span class="contact-label">お電話</span>
+                <p><a href="tel:0529904674">052-990-4674</a></p>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-label">メール</span>
+                <p><a href="mailto:xxxxx@gmail.com">xxxxx@gmail.com</a></p>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-label">Instagram</span>
+                <p>
+                  <a href="https://www.instagram.com/ohana__houkan/" target="_blank">
+                    DMからのお問い合わせも可能です
+                  </a>
+                </p>
+              </div>
+
+              <p class="contact-note">
+                ※見学のみのご相談も歓迎しております。
+              </p>
+            </div>
           </div>
         </div>
       </section>
     </main>
-
+    
     <!-- ===== フッター ===== -->
-    <footer>
-      <p>© Ohana</p>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-info">
+          <div class="footer-top">
+            <h2 class="footer-logo">
+              <a href="index.html">
+                <img src="images/logo.png" alt="オハナ訪問看護ステーション">
+              </a>
+            </h2>
+
+            <a
+              href="https://www.instagram.com/ohana__houkan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-instagram"
+            >
+              <img src="images/insta.png" alt="Instagram">
+            </a>
+            <p class="instagram-text">Instagram</p>
+          </div>
+
+          <div class="footer-details">
+            <div class="footer-row">
+              <span class="footer-badge">住所</span>
+              <p>名古屋市天白区<br>元八事3-18</p>
+            </div>
+
+            <div class="footer-row">
+              <span class="footer-badge">電話番号</span>
+              <p><a href="tel:0529904674">052-990-4674</a></p>
+            </div>
+
+            <div class="footer-row">
+              <span class="footer-badge">営業時間</span>
+              <p>月～土 9:00～18:00</p>
+            </div>
+
+            <div class="footer-row">
+              <span class="footer-badge">定休日</span>
+              <p>日・祝（緊急の場合はご相談ください）</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.2323695304135!2d136.9679021747939!3d35.125874360283056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037b26038a5c4b%3A0x2143056238505ee0!2z44CSNDY4LTAwNjYg5oSb55-l55yM5ZCN5Y-k5bGL5biC5aSp55m95Yy65YWD5YWr5LqL77yT5LiB55uu77yR77yY!5e0!3m2!1sja!2sjp!4v1776941270360!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+      <p class="footer-copy">© Ohana</p>
     </footer>
 
     <script src="./js/main.js"></script>
+
   </body>
 </html>

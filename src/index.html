@@ -35,31 +35,59 @@
       
       <!-- ファーストビュー -->
       <section class="hero">
-        <div class="hero-inner">
-          <h2>家族のように想い、支え合う看護を</h2>
-          <p>オハナ訪問看護ステーション<span class="num">2O26</span></p>
+        <!--メイン画像-->
+        <div class="hero-images">
+          <img src="images/main_image2.png" alt="" class="hero-image image-left">
+          <img src="images/main_image.png" alt="" class="hero-image image-right">
+        </div>
+
+        <!-- 背景装飾模様 -->
+        <div class="hero-decorations">
+          <img src="images/center_top.png" alt="" class="decor center-top">
+          <img src="images/center_btm.png" alt="" class="decor center-bottom">
+          <img src="images/left_btm.png" alt="" class="decor left-bottom">
+          <img src="images/right_top.png" alt="" class="decor right-top">
+          <img src="images/right_btm.png" alt="" class="decor right-bottom">
         </div>
       </section>
 
       <!-- 特徴 -->
       <section id="features" class="features">
         <div class="container">
-          <h2>オハナの特徴</h2>
+          <h2 class="section-title">
+            <img src="images/leaf_deco.png" alt="" class="title-deco">
+            <span class="title-text">オハナの特徴</span>
+          </h2>
 
           <div class="features-list">
-            <div class="feature-card">
-              <h3>特徴01</h3>
-              <p>説明テキスト</p>
+            <div class="feature-card fade-up delay-1">
+              <p class="feature-number">特徴<span class="small-number">O1</span></p>
+              <img src="images/feature1.png" alt="" class="feature-illustration">
+              <h3 class="feature-catch">フットワーク軽く<br>迅速に対応します！</h3>
+              <div class="feature-line"></div>
+              <p class="feature-description">
+                スタッフは30代が中心です。フットワーク軽く迅速に対応することを心がけています。
+              </p>
             </div>
 
-            <div class="feature-card">
-              <h3>特徴02</h3>
-              <p>説明テキスト</p>
+            <div class="feature-card fade-up delay-2">
+              <p class="feature-number">特徴<span class="small-number">O2</span></p>
+              <img src="images/feature2.png" alt="" class="feature-illustration">
+              <h3 class="feature-catch">ST<span class="small-text">(言語聴覚士)</span>による<br>嚥下評価ができます</h3>
+              <div class="feature-line"></div>
+              <p class="feature-description">
+                ST(言語聴覚士)が在籍。嚥下機能評価、リハビリテーションを行うことができます。
+              </p>
             </div>
 
-            <div class="feature-card">
-              <h3>特徴03</h3>
-              <p>説明テキスト</p>
+            <div class="feature-card fade-up delay-3">
+              <p class="feature-number">特徴<span class="small-number">O3</span></p>
+              <img src="images/feature3.png" alt="" class="feature-illustration">
+              <h3 class="feature-catch">本人のご希望を<br>尊重します！</h3>
+              <div class="feature-line"></div>
+              <p class="feature-description">
+                ご本人やご家族の思いを丁寧に伺いながら、その方らしい生活を支えられるよう努めています。
+              </p>
             </div>
           </div>
         </div>
@@ -68,13 +96,35 @@
       <!-- ご利用の流れ -->
       <section id="flow" class="flow">
         <div class="container">
-          <h2>ご利用の流れ</h2>
+          <h2 class="section-title">
+            <img src="images/leaf_deco.png" alt="" class="title-deco">
+            <span class="title-text">ご利用の流れ</span>
+          </h2>
 
-          <div class="flow-list">
-            <div class="flow-item">お問い合わせ</div>
-            <div class="flow-item">ご説明</div>
-            <div class="flow-item">ご契約</div>
-            <div class="flow-item">ご利用開始</div>
+          <div class="flow-card area-card">
+            <img src="images/nagare.png" alt="" class="area-main-image">
+
+            <h3 class="area-title">対象エリア</h3>
+
+            <div class="area-content">
+              <div class="area-left">
+                <img src="images/area.png" alt="" class="area-map-image">
+              </div>
+
+              <div class="area-right">
+                <ul class="area-list">
+                  <li><span class="maru">●</span>天白区</li>
+                  <li><span class="maru">●</span>名東区</li>
+                  <li><span class="maru">●</span>千種区</li>
+                  <li><span class="maru">●</span>昭和区</li>
+                  <li><span class="maru">●</span>瑞穂区</li>
+                  <li><span class="maru">●</span>緑区</li>
+                  <li><span class="maru">●</span>南区</li>
+                </ul>
+
+                <img src="images/area_sub.png" alt="" class="area-sub-image">
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -82,17 +132,96 @@
       <!-- スタッフ紹介 -->
       <section id="staff" class="staff">
         <div class="container">
-          <h2>スタッフ紹介</h2>
+          <h2 class="section-title">
+            <img src="images/leaf_deco.png" alt="" class="title-deco">
+            <span class="title-text">スタッフ紹介</span>
+          </h2>
 
           <div class="staff-list">
-            <div class="staff-card">
-              <p>スタッフ名</p>
-              <p>説明</p>
+            <!-- 1人目 -->
+            <div class="staff-card fade-up">
+              <div class="staff-text">
+                <div class="staff-top">
+                  <div class="staff-profile">
+                    <span class="staff-badge">管理者</span>
+
+                    <div class="staff-profile-text">
+                      <h3 class="staff-name">近藤 裕也</h3>
+                      <p class="staff-career">看護師歴13年</p>
+                    </div>
+                  </div>
+
+                  <p class="staff-history">
+                    看護師 / 保健師 / 医療経営士 / 在宅看護指導士<br>
+                    [ 整形外科 / 循環器内科 / 心臓血管外科 / 消化器内科勤務 ]
+                  </p>
+                </div>
+
+                <p class="staff-message">
+                  利用者様がその人らしく生活できることを第一に考えそのサポートをしていきたいと考えています！
+                  利用者様に家族の一員を思っていただけるような関係を作っていきたいと思います！
+                </p>
+              </div>
+
+              <div class="staff-image-wrap">
+                <img src="images/profile_1.png" alt="" class="staff-image">
+              </div>
             </div>
 
-            <div class="staff-card">
-              <p>スタッフ名</p>
-              <p>説明</p>
+            <!-- 2人目 -->
+            <div class="staff-card reverse fade-up">
+              <div class="staff-text">
+                <div class="staff-top">
+                  <div class="staff-profile">
+                    <div class="staff-profile-text">
+                      <h3 class="staff-name">中尾 司</h3>
+                      <p class="staff-career">看護師歴9年</p>
+                    </div>
+                  </div>
+
+                  <p class="staff-history">
+                    看護師<br>
+                    [ 循環器内科 / 心臓血管外科勤務・訪問看護管理者 ]
+                  </p>
+                </div>
+
+                <p class="staff-message">
+                  利用者様が希望する在宅での過ごし方に寄り添い、健やかで安心な在宅生活を送れるようサポートいたします。
+                  利用者様やご家族様から安心していただけるような看護を提供していきます。
+                </p>
+              </div>
+
+              <div class="staff-image-wrap">
+                <img src="images/profile_2.png" alt="" class="staff-image">
+              </div>
+            </div>
+
+            <!-- 3人目 -->
+            <div class="staff-card fade-up">
+              <div class="staff-text">
+                <div class="staff-top">
+                  <div class="staff-profile">
+                    <div class="staff-profile-text">
+                      <h3 class="staff-name">纐纈 安純</h3>
+                      <p class="staff-career">看護師歴13年</p>
+                    </div>
+                  </div>
+
+                  <p class="staff-history">
+                    看護師 / 保健師 / 養護教諭 / 食生活アドバイザー<br>
+                    [ 集中治療 / 透析 / 外来(耳鼻科・小児科)勤務 ]
+                  </p>
+                </div>
+
+                <p class="staff-message">
+                  利用者様・ご家族様に寄り添いながら、生活がより患者様らしく送れるようにサポートいたします。
+                  患者様・ご家族様が安心して看護を受けられるよう、笑顔を絶やさず信頼関係を築きながら関わらせていただきたいです。
+                </p>
+              </div>
+
+              <div class="staff-image-wrap">
+                <img src="images/profile_3.png" alt="" class="staff-image">
+              </div>
             </div>
           </div>
         </div>
@@ -101,38 +230,158 @@
       <!-- お問い合わせ -->
       <section id="contact" class="contact">
         <div class="container">
-          <h2>お問い合わせ</h2>
-          <p>まずはお気軽にお問合せ・ご相談ください！</p>
-          <p class="tel">
-            <a href="tel:00000000000">000-0000-0000</a>
-          </p>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section id="faq" class="faq">
-        <div class="container">
-          <h2>よくある質問</h2>
-
-          <div class="faq-item">
-            <p class="question">Q. 質問内容</p>
-            <p class="answer">A. 回答内容</p>
-          </div>
-
-          <div class="faq-item">
-            <p class="question">Q. 質問内容</p>
-            <p class="answer">A. 回答内容</p>
+          <h2>まずはお気軽にお問合せ・ご相談ください！</h2>
+          <div class="phone-number-image">
+            <img src="images/phone.png" alt="">
           </div>
         </div>
       </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2>よくある質問</h2>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              <img src="images/q1.png" alt="Q1" class="faq-image">
+              <span class="faq-text">訪問看護ってどんなことをしてくれるの？</span>
+              <span class="faq-icon">＋</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                主治医の指示に基づき、看護師がご自宅へ訪問し、療養生活をサポートいたします。<br>
+                健康状態の観察、服薬管理、点滴や創処置などの医療的ケアに加え、清潔ケアや日常生活の支援、ご家族への介護相談などを行います。<br>
+                ご利用者様お一人おひとりの状態やご希望に合わせて、安心してご自宅で過ごせるよう支援いたします。
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <img src="images/q2.png" alt="Q2" class="faq-image">
+              <span class="faq-text">料金はどれくらいなの？</span>
+              <span class="faq-icon">＋</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                訪問看護は、医療保険または介護保険が適用されます。<br>
+                自己負担は原則1〜3割となり、保険の種類や負担割合、訪問回数・内容によって異なります。<br>
+                また、一定の条件により公費負担制度が適用される場合もございます。<br>
+                詳しい費用については個別にご案内いたしますので、お気軽にお問い合わせください。<br>
+                重要事項要件書はこちら
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <img src="images/q3.png" alt="Q3" class="faq-image">
+              <span class="faq-text">対象年齢は高齢者だけ？</span>
+              <span class="faq-icon">＋</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                年齢に関わらずご利用いただけます。<br>
+                医療保険の場合は小児から高齢者まで、主治医の指示があればご利用可能です。<br>
+                介護保険の場合は原則65歳以上（または特定疾病のある40歳以上）の方が対象となります。<br>
+                詳しくはご状況に応じてご案内いたしますので、お気軽にご相談ください。
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <img src="images/q4.png" alt="Q4" class="faq-image">
+              <span class="faq-text">訪問時間はどれくらい？</span>
+              <span class="faq-icon">＋</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                訪問時間はご利用者様の状態やサービス内容に応じて異なりますが、一般的には1回あたり30分〜90分程度となります。<br>
+                主治医の指示やケアプランに基づき、適切な訪問時間を設定いたします。<br>
+                詳しい訪問時間についてはご相談のうえ決定いたします。
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <img src="images/q5.png" alt="Q5" class="faq-image">
+              <span class="faq-text">１日に何回も来てくれるの？</span>
+              <span class="faq-icon">＋</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                必要に応じて1日に複数回訪問することも可能です。<br>
+                ただし、訪問回数は主治医の指示やケアプラン、保険制度に基づいて決定されます。<br>
+                医療的な必要性が高い場合には、複数回訪問や緊急時の対応も行っております。<br>
+                ご利用者様の状態に合わせて柔軟に対応いたします。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     </main>
 
     <!-- ===== フッター ===== -->
-    <footer>
-      <p>© Ohana</p>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-info">
+          <div class="footer-top">
+            <h2 class="footer-logo">
+              <a href="index.html">
+                <img src="images/logo.png" alt="オハナ訪問看護ステーション">
+              </a>
+            </h2>
+
+            <a
+              href="https://www.instagram.com/ohana__houkan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-instagram"
+            >
+              <img src="images/insta.png" alt="Instagram">
+            </a>
+            <p class="instagram-text">Instagram</p>
+          </div>
+
+          <div class="footer-details">
+            <div class="footer-row">
+              <span class="footer-badge">住所</span>
+              <p>名古屋市天白区<br>元八事3-18</p>
+            </div>
+
+            <div class="footer-row">
+              <span class="footer-badge">電話番号</span>
+              <p><a href="tel:0529904674">052-990-4674</a></p>
+            </div>
+
+            <div class="footer-row">
+              <span class="footer-badge">営業時間</span>
+              <p>月～土 9:00～18:00</p>
+            </div>
+
+            <div class="footer-row">
+              <span class="footer-badge">定休日</span>
+              <p>日・祝（緊急の場合はご相談ください）</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.2323695304135!2d136.9679021747939!3d35.125874360283056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037b26038a5c4b%3A0x2143056238505ee0!2z44CSNDY4LTAwNjYg5oSb55-l55yM5ZCN5Y-k5bGL5biC5aSp55m95Yy65YWD5YWr5LqL77yT5LiB55uu77yR77yY!5e0!3m2!1sja!2sjp!4v1776941270360!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+      <p class="footer-copy">© Ohana</p>
     </footer>
 
     <script src="./js/main.js"></script>
+
   </body>
 </html>

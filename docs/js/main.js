@@ -19,4 +19,10 @@ const elements = document.querySelectorAll(".fade-up");
 
   elements.forEach((el) => observer.observe(el));
 
-  
+  window.addEventListener("load", () => {
+  const loading = document.getElementById("loading");
+
+  setTimeout(() => {
+    loading.classList.add("fade-out");
+  }, 800); // 表示時間（調整OK）
+});

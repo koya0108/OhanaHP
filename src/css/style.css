@@ -47,20 +47,13 @@ section {
   max-width: 1100px;
   margin: 0 auto;
 }
-
-:root {
-  --header-height: 86px;
-}
-
 /* =========================
   ヘッダー
 ========================= */
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
+  z-index: 100;
   background-color: #fff;
 }
 
@@ -152,35 +145,11 @@ section {
 ========================= */
 .hero {
   position: relative;
-  margin-top: var(--header-height);
-  width: 100%;
-  height: clamp(550px, calc(100vh - var(--header-height) - 40px), 600px);
-  padding: 0;
+  min-height: calc(100vh - 70px);
   background-color: #fbe4de;
+  display: flex;
+  align-items: center;
   overflow: hidden;
-}
-
-/* 装飾画像：画面全体基準 */
-.hero-decorations {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.decor {
-  position: absolute;
-  width: clamp(160px, 20vw, 320px);
-  height: auto;
-}
-
-/* メイン画像：中央1200pxの箱基準 */
-.hero-inner {
-  position: relative;
-  width: min(100%, 1200px);
-  height: 100%;
-  margin: 0 auto;
-  z-index: 2;
 }
 
 .hero-images {
@@ -191,61 +160,65 @@ section {
 .hero-image {
   position: absolute;
   display: block;
+  max-width: 100%;
   height: auto;
 }
 
-/* 左メイン画像 */
+/* 左側・手前に置く画像 */
 .image-left {
-  top: 40%;
-  left: 15%;
-  width: clamp(300px, 28vw, 480px);
-  transform: translate(-50%, -50%);
+  top: 110px;
+  left: clamp(100px, 10vw, 240px);
+  width: clamp(300px, 30vw, 520px);
   z-index: 3;
-
-  opacity: 0;
-  animation: heroFadeLeft 1.6s ease-out 0.4s forwards;
 }
 
-/* 右メイン画像 */
+/* 右側・少し後ろに置く画像 */
 .image-right {
-  top: 50%;
-  left: 58%;
-  width: clamp(650px, 52vw, 1000px);
-  transform: translate(-50%, -50%);
+  top: 130px;
+  left: clamp(300px, 28vw, 680px);
+  width: clamp(620px, 60vw, 1200px);
   z-index: 2;
-
-  opacity: 0;
-  animation: heroFadeRight 1.4s ease-out 0.2s forwards;
 }
 
-/* 装飾の配置 */
+/* 装飾レイヤー */
+.decor {
+  position: absolute;
+  width: 380px;
+  height: auto;
+}
+
+.hero-decorations {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
 .center-top {
-  top: -70px;
+  top: -90px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .center-bottom {
-  bottom: -60px;
+  bottom: -80px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .left-bottom {
-  bottom: -50px;
+  bottom: -60px;
   left: -30px;
 }
 
 .right-top {
-  top: 60px;
+  top: 70px;
   right: -30px;
 }
 
 .right-bottom {
-  bottom: -60px;
-  right: -50px;
+  bottom: -90px;
+  right: -70px;
 }
-
 /* =========================
   共通見出し
 ========================= */
@@ -274,7 +247,7 @@ section {
 /* =========================
   特徴
 ========================= */
-.features .section-title {
+.section-title {
   font-family: "Zen Maru Gothic", sans-serif;
   font-size: 26px;
   font-weight: 500;
@@ -335,14 +308,6 @@ section {
   letter-spacing: 0.05em;
 }
 
-.feature-illust-box {
-  height: 100px; /* 3つ共通の画像エリア */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
 /* イラスト */
 .feature-illustration {
   display: block;
@@ -375,6 +340,7 @@ section {
 
 /* 説明文 */
 .feature-description {
+  font-family: "Noto Sans JP", sans-serif;
   margin: 0;
   font-size: 16px;
   line-height: 1.9;
@@ -475,6 +441,7 @@ section {
   margin: 0 0 0 70px;
   list-style: none;
 
+  font-family: "Zen Maru Gothic", sans-serif;
   font-size: 20px;
   font-weight: 500;
   color: #647869;
@@ -593,6 +560,7 @@ section {
 
 .staff-name {
   margin: 0 0 8px;
+  font-family: "Zen Maru Gothic", sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: #647869;
@@ -601,6 +569,7 @@ section {
 
 .staff-career {
   margin: 0;
+  font-family: "Zen Maru Gothic", sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #647869;
@@ -609,6 +578,7 @@ section {
 
 .staff-history {
   margin: 0;
+  font-family: "Zen Maru Gothic", sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #647869;
@@ -621,6 +591,7 @@ section {
 
 .staff-message {
   margin: 0;
+  font-family: "Zen Maru Gothic", sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #647869;
@@ -700,6 +671,7 @@ section {
 }
 
 .faq-question {
+  font-family: "Zen Maru Gothic", sans-serif;
   width: 100%;
   background: none;
   border: none;
@@ -722,15 +694,13 @@ section {
   width: 44px;
   height: auto;
   flex-shrink: 0;
-  position: relative;
-  top: -3px;
 }
 
 .faq-icon {
   font-size: 28px;
   font-weight: 400;
   line-height: 1;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
   flex-shrink: 0;
   margin-left: 16px;
 }
@@ -743,6 +713,7 @@ section {
 }
 
 .faq-answer p {
+  font-family: "Zen Maru Gothic", sans-serif;
   letter-spacing: 0.05em;
   padding: 20px 28px 24px;
   font-size: 16px;
@@ -756,12 +727,8 @@ section {
   max-height: 300px;
 }
 
-.faq-icon::before {
-  content: "＋";
-}
-
-.faq-item.active .faq-icon::before {
-  content: "ー";
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
 }
 
 /* =========================
@@ -842,6 +809,7 @@ section {
 
 .footer-row p {
   margin: 0;
+  font-family: "Zen Maru Gothic", sans-serif;
   font-size: 14px;
   line-height: 1.7;
   color: #647869;
@@ -883,7 +851,8 @@ section {
   padding: 80px 20px;
 }
 
-.recruit-title {
+.recruit,
+.recruit * {
   font-family: "Zen Maru Gothic", sans-serif;
 }
 
@@ -1138,29 +1107,46 @@ section {
 }
 
 /* ファーストビュー 動き */
+.image-left {
+  top: 110px;
+  left: clamp(100px, 10vw, 240px);
+  width: clamp(300px, 30vw, 520px);
+  z-index: 3;
+  opacity: 0;
+  animation: heroFadeLeft 2.0s ease-out 1.0s forwards;
+}
+
+.image-right {
+  top: 130px;
+  left: clamp(300px, 28vw, 680px);
+  width: clamp(620px, 60vw, 1200px);
+  z-index: 2;
+  opacity: 0;
+  animation: heroFadeRight 1.6s ease-out 0.5s forwards;
+}
 
 @keyframes heroFadeLeft {
   0% {
     opacity: 0;
-    transform: translate(-50%, calc(-50% + 30px)) scale(0.96);
+    transform: translateY(30px) scale(0.96);
   }
   60% {
     opacity: 1;
-    transform: translate(-50%, calc(-50% - 6px)) scale(1.02);
+    transform: translateY(-6px) scale(1.02);
   }
   100% {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translateY(0) scale(1);
   }
 }
 
 @keyframes heroFadeRight {
   0% {
     opacity: 0;
-    transform: translate(-50%, calc(-50% + 20px)) scale(0.98);
+    transform: translateY(20px) scale(0.98);
   }
   100% {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translateY(0) scale(1);
   }
 }

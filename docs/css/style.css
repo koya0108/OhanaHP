@@ -196,14 +196,14 @@ section {
 
 /* 左メイン画像 */
 .image-left {
-  top: 40%;
-  left: 15%;
+  top: 34%;
+  left: 20%;
   width: clamp(300px, 28vw, 480px);
   transform: translate(-50%, -50%);
   z-index: 3;
 
   opacity: 0;
-  animation: heroFadeLeft 1.6s ease-out 0.4s forwards;
+  animation: heroFadeLeft 2.0s ease-out 1.4s forwards;
 }
 
 /* 右メイン画像 */
@@ -215,7 +215,7 @@ section {
   z-index: 2;
 
   opacity: 0;
-  animation: heroFadeRight 1.4s ease-out 0.2s forwards;
+  animation: heroFadeRight 2.4s ease-out 1.2s forwards;
 }
 
 /* 装飾の配置 */
@@ -1163,4 +1163,41 @@ section {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
+}
+
+/* ローディング画面 */
+#loading {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  transition: opacity 0.8s ease;
+}
+
+/* ロゴ */
+.loading-logo {
+  width: 300px;
+  opacity: 0;
+  animation: logoFade 1.2s ease forwards;
+}
+
+/* ロゴふわっと表示 */
+@keyframes logoFade {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* フェードアウト用 */
+#loading.fade-out {
+  opacity: 0;
+  pointer-events: none;
 }

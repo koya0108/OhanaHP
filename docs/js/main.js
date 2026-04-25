@@ -9,20 +9,30 @@ faqQuestions.forEach((question) => {
 
 const elements = document.querySelectorAll(".fade-up");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
   });
+});
 
-  elements.forEach((el) => observer.observe(el));
+elements.forEach((el) => observer.observe(el));
 
-  window.addEventListener("load", () => {
+window.addEventListener("load", () => {
   const loading = document.getElementById("loading");
+
+  if (!loading) return;
+
+  const isLoadingShown = sessionStorage.getItem("loadingShown");
+
+  if (isLoadingShown) {
+    loading.style.display = "none";
+    return;
+  }
 
   setTimeout(() => {
     loading.classList.add("fade-out");
-  }, 800); // 表示時間（調整OK）
+    sessionStorage.setItem("loadingShown", "true");
+  }, 600);
 });

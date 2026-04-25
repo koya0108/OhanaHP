@@ -14,6 +14,11 @@ body {
   background-color: #fff;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -41,6 +46,18 @@ p {
 section {
   padding: 80px 20px;
 }
+
+@media screen and (max-width: 768px) {
+  section {
+    padding-top: 40px;
+    padding-bottom: 56px;
+  }
+  
+  .section-title {
+  margin-top: 0;
+}
+}
+
 
 .container {
   width: 100%;
@@ -147,6 +164,34 @@ section {
 .header-contact-btn:hover {
   opacity: 0.85;
 }
+
+/* =========================
+  ハンバーガーメニュー
+========================= */
+.hamburger {
+  display: none;
+  width: 34px;
+  height: 26px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #647869;
+  border-radius: 999px;
+}
+
+.hamburger span + span {
+  margin-top: 7px;
+}
+
+
 /* =========================
   ファーストビュー
 ========================= */
@@ -246,6 +291,53 @@ section {
   right: -50px;
 }
 
+@media screen and (max-width: 768px) {
+  .hero {
+    margin-top: 64px;
+    height: 520px;
+  }
+
+  .image-right {
+    width: 95vw;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+  }
+
+  .image-left {
+    width: 50vw;
+    top: 22%;
+    left: 25%;
+    z-index: 2;
+  }
+
+  .decor {
+    width: 180px;
+  }
+
+  .left-bottom {
+    bottom: -5%;
+    left: -10%;
+  }
+
+  .right-top {
+    bottom: 60px;
+    right: -30px;
+  }
+
+  .right-bottom {
+    bottom: -60px;
+    right: 50px;
+  }
+
+  .center-bottom {
+  bottom: 80px;
+  left: auto;
+  right: -20px;
+  transform: none;
+}
+}
+
 /* =========================
   共通見出し
 ========================= */
@@ -269,6 +361,25 @@ section {
 .title-deco {
   width: 40px; /* サイズは調整OK */
   height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .section-title {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .title-text {
+    margin: 0 auto;
+  }
+
+  .title-deco {
+    position: absolute;
+    left: 66px;   /* ← 微調整OK */
+    top: 48%;
+    transform: translateY(-50%);
+  }
 }
 
 /* =========================
@@ -407,6 +518,85 @@ section {
   color: #647869;
 }
 
+@media screen and (max-width: 768px) {
+  .features-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .feature-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "number number"
+      "catch illust"
+      "description description";
+    column-gap: 16px;
+    row-gap: 10px;
+    width: 100%;
+    max-width: 90%;
+    padding: 16px 16px;
+  }
+
+  /* 特徴01 + */
+  .feature-number {
+    grid-area: number;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 0;
+    font-size: 22px;
+  }
+
+  /* ＋を右端に */
+  .feature-number::after {
+    content: "＋";
+    margin-left: auto;
+    font-size: 28px;
+  }
+
+  /* キャッチコピー（左） */
+  .feature-catch {
+    grid-area: catch;
+    margin: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    text-align: left;
+    height: auto;
+  }
+
+  /* イラスト（右寄せ + 少し内側） */
+  .feature-illust-box {
+    grid-area: illust;
+    display: flex;
+    justify-content: flex-end;
+    height: auto;
+    margin: 0;
+  }
+
+  .feature-illustration {
+    width: 90px;
+    margin: 0;
+    transform: translateX(-10px); /* ← ここがポイント */
+  }
+
+  /* 説明文（横いっぱい） */
+  .feature-description {
+    grid-area: description;
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  /* 線は非表示（好み） */
+  .feature-line {
+    display: none;
+  }
+}
+
 /* =========================
   ご利用の流れ
 ========================= */
@@ -529,6 +719,79 @@ section {
   border-radius: 16px;
   text-align: center;
   font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .flow-card {
+    padding: 28px 18px;
+    border-radius: 20px;
+  }
+
+  /* 1枚目画像 */
+  .area-main-image {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto 24px;
+  }
+
+  /* 対象エリア */
+  .area-title {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 24px;
+    padding: 8px 30px;
+    font-size: 18px;
+  }
+
+  /* 横並び解除 */
+  .area-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .area-left,
+  .area-right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .area-left {
+    justify-content: center;
+  }
+
+  .area-right {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* 2枚目画像 area.png */
+  .area-map-image {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  /* エリアリスト：2行に収める */
+  .area-list {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 8px 14px;
+    font-size: 15px;
+  }
+
+  /* 3枚目画像 area_sub.png */
+  .area-sub-image {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    align-self: center;
+  }
 }
 
 /* =========================
@@ -669,6 +932,104 @@ section {
   border-radius: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .staff-card {
+    display: grid;
+    grid-template-columns: 1fr 110px;
+    grid-template-areas:
+      "top image"
+      "message message";
+    column-gap: 16px;
+    row-gap: 16px;
+    padding: 24px 18px;
+    align-items: start;
+  }
+
+  /* 2枚目の左右反転を解除 */
+  .staff-card.reverse {
+    flex-direction: row;
+  }
+
+  /* HTMLを変えずに中身をgridに参加させる */
+  .staff-text {
+    display: contents;
+  }
+
+  /* 名前・経歴・職歴ブロック */
+  .staff-top {
+    grid-area: top;
+    display: block;
+    margin-bottom: 0;
+    min-width: 0;
+  }
+
+  /* バッジ＋名前経歴を横並び */
+  .staff-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    min-width: 0;
+    margin-bottom: 10px;
+  }
+
+  /* 名前＋経歴は縦並び */
+  .staff-profile-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .staff-badge {
+    width: 42px;
+    height: 42px;
+    font-size: 12px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  .staff-name {
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0 0 4px;
+  }
+
+  .staff-career {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .staff-history {
+    font-size: 12px;
+    line-height: 1.7;
+    border-left: none;
+    border-top: 1px solid #647869;
+    padding-left: 0;
+    padding-top: 10px;
+    margin: 0;
+  }
+
+  /* 右側画像 */
+  .staff-image-wrap {
+    grid-area: image;
+    width: 110px;
+  }
+
+  .staff-image {
+    width: 100%;
+  }
+
+  /* メッセージはカード幅いっぱい */
+  .staff-message {
+    grid-area: message;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+  }
+}
+
 /* =========================
   お問い合わせ
 ========================= */
@@ -695,6 +1056,21 @@ section {
   width: 90%;
   margin: 0 auto;
   text-align: center;
+}
+
+.sp-only {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .contact h2 {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .sp-only {
+    display: inline;
+  }
 }
 
 /* =========================
@@ -799,6 +1175,35 @@ section {
   font-weight: 500;
 }
 
+@media screen and (max-width: 768px) {
+  .faq-item.active .faq-answer {
+    max-height: 700px;
+  }
+
+  /* 質問全体の余白を縮める */
+  .faq-question {
+    padding: 18px 16px;
+    gap: 10px;
+  }
+
+  /* テキストを1行に収める */
+  .faq-text {
+    font-size: 13px;          /* ← 少し小さく */
+    white-space: normal;
+    overflow: hidden;         /* ← はみ出し隠す */
+    text-overflow: ellipsis;  /* ← … にする */
+  }
+
+  /* アイコン少し詰める */
+  .faq-icon {
+    margin-left: 8px;
+    font-size: 24px;
+  }
+
+  .faq-image {
+    width: 36px;
+  }
+}
 /* =========================
   フッター
 ========================= */
@@ -827,12 +1232,18 @@ section {
 }
 
 .footer-logo img {
-  width: 300px;   /* 少し大きく */
+  width: 300px;
   height: auto;
 }
 
+.footer-instagram-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .footer-instagram img {
-  width: 42px;    /* 少し大きく */
+  width: 42px;
   height: auto;
 }
 
@@ -842,7 +1253,6 @@ section {
   color: #647869;
 }
 
-/* 4項目全体 */
 .footer-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -850,14 +1260,12 @@ section {
   row-gap: 18px;
 }
 
-/* 1行ごとのセット */
 .footer-row {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-/* 横長バッチ */
 .footer-badge {
   display: inline-flex;
   align-items: center;
@@ -903,34 +1311,155 @@ section {
   display: block;
   border: 0;
 }
+
 .footer-bottom {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px; /* 間隔 */
+  gap: 12px;
   margin-top: 32px;
   font-size: 12px;
 }
 
-/* リンク */
 .footer-link {
   color: #647869;
   text-decoration: underline;
   font-size: 12px;
 }
 
-/* コピー */
+.footer-link::after {
+  content: "|";
+  margin-left: 12px;
+  color: #aaa;
+}
+
 .footer-copy {
   margin: 0;
   font-size: 12px;
   color: #647869;
 }
 
-/* 区切り線（オプション） */
-.footer-link::after {
-  content: "|";
-  margin-left: 12px;
-  color: #aaa;
+.sp-only {
+    display: inline;
+}
+
+@media screen and (max-width: 768px) {
+
+  /* 全体余白 */
+  .footer {
+    padding: 56px 20px 24px;
+  }
+
+  /* 親を縦並び */
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  /* グループを解体して並び替え可能に */
+  .footer-info {
+    display: contents;
+  }
+
+  .footer-top {
+    display: contents;
+  }
+
+  /* ===== 順番制御 ===== */
+  .footer-logo {
+    order: 1;
+    text-align: center;
+  }
+
+  .footer-map {
+    order: 2;
+    width: 100%;
+  }
+
+  .footer-details {
+    order: 3;
+    width: 100%;
+  }
+
+  .footer-instagram-wrap {
+    order: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* ===== ロゴ ===== */
+  .footer-logo img {
+    width: 220px;
+  }
+
+  /* ===== 地図 ===== */
+  .footer-map iframe {
+    width: 100%;
+    height: 220px;
+  }
+
+  /* ===== 詳細（住所など） ===== */
+  .footer-details {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .footer-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .footer-badge {
+    min-width: 80px;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  .footer-row p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ===== Instagram ===== */
+  .footer-instagram img {
+    width: 36px;
+  }
+
+  .instagram-text {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  /* ===== 下部 ===== */
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+  }
+
+  .footer-link {
+    font-size: 14px;
+  }
+
+  .footer-link::after {
+    display: none;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+  }
+
+  .sp-only {
+    display: none;
+  }
 }
 
 /* =========================
@@ -1157,8 +1686,8 @@ section {
   }
 
   .recruit-intro {
-    text-align: left;
-    font-size: 15px;
+    text-align: center;
+    font-size: 13px;
   }
 
   .recruit-section-title {
@@ -1187,41 +1716,34 @@ section {
 /* =========================
   レスポンシブ
 ========================= */
-@media (max-width: 768px) {
+/* =========================
+  スマホ版ヘッダー
+========================= */
+@media screen and (max-width: 768px) {
   .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 12px 20px;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
   }
 
-  .nav ul {
-    gap: 16px;
+  #logo img {
+    width: 140px;
   }
 
-  .hero {
-    padding: 80px 20px;
+  .hamburger {
+    display: block;
   }
 
-  .hero h2 {
-    font-size: 30px;
+  .nav {
+    display: none;
   }
 
-  .features-list {
-    flex-direction: column;
-  }
-
-  .features h2,
-  .flow h2,
-  .staff h2,
-  .contact h2,
-  .faq h2 {
-    font-size: 28px;
-    margin-bottom: 32px;
-  }
-
-  .tel a {
-    font-size: 26px;
+  .header-contact-btn {
+    display: none;
   }
 }
+
 
 /* 動き */
 .fade-up {
@@ -1310,4 +1832,23 @@ section {
 #loading.fade-out {
   opacity: 0;
   pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  .features,
+  .flow,
+  .staff,
+  .contact,
+  .faq {
+    padding-top: 40px;
+    padding-bottom: 56px;
+  }
+
+  .contact {
+    padding-bottom: 20px;
+  }
+
+  .faq {
+    padding-top: 20px;
+  }
 }

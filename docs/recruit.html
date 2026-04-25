@@ -13,9 +13,19 @@
 
   <body>
     <!-- ===== ヘッダー ===== -->
-    <header>
+    <header class="header">
       <div class="header-inner">
-        <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="オハナ訪問看護ステーションのロゴ"></a></h1>
+        <h1 id="logo">
+          <a href="index.html"><img src="images/logo.png" alt="オハナ訪問看護ステーションのロゴ">
+          </a>
+        </h1>
+
+        <!--ハンバーガーメニュー-->
+        <button class="hamburger" aria-label="メニューを開く">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
         <nav class="nav">
           <ul class="nav-list">
@@ -233,6 +243,8 @@
     <!-- ===== フッター ===== -->
     <footer class="footer">
       <div class="container footer-inner">
+
+        <!-- 左側：ロゴ・Instagram・詳細 -->
         <div class="footer-info">
           <div class="footer-top">
             <h2 class="footer-logo">
@@ -241,21 +253,23 @@
               </a>
             </h2>
 
-            <a
-              href="https://www.instagram.com/ohana__houkan/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="footer-instagram"
-            >
-              <img src="images/insta.png" alt="Instagram">
-            </a>
-            <p class="instagram-text">Instagram</p>
+            <div class="footer-instagram-wrap">
+              <a
+                href="https://www.instagram.com/ohana__houkan/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-instagram"
+              >
+                <img src="images/insta.png" alt="Instagram">
+              </a>
+              <p class="instagram-text">Instagram</p>
+            </div>
           </div>
 
           <div class="footer-details">
             <div class="footer-row">
               <span class="footer-badge">住所</span>
-              <p>名古屋市天白区<br>元八事3-18</p>
+              <p>名古屋市天白区<br class="sp-only">元八事3-18</p>
             </div>
 
             <div class="footer-row">
@@ -275,12 +289,20 @@
           </div>
         </div>
 
+        <!-- 右側：地図 -->
         <div class="footer-map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.2323695304135!2d136.9679021747939!3d35.125874360283056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037b26038a5c4b%3A0x2143056238505ee0!2z44CSNDY4LTAwNjYg5oSb55-l55yM5ZCN5Y-k5bGL5biC5aSp55m95Yy65YWD5YWr5LqL77yT5LiB55uu77yR77yY!5e0!3m2!1sja!2sjp!4v1776941270360!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.2323695304135!2d136.9679021747939!3d35.125874360283056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037b26038a5c4b%3A0x2143056238505ee0!2z44CSNDY4LTAwNjYg5oSb55-l55yM5ZCN5Y-k5bGL5biC5aSp55m95Yy65YWD5YWr5LqL77yT5LiB55uu77yR77yY!5e0!3m2!1sja!2sjp!4v1776941270360!5m2!1sja!2sjp"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
       </div>
+
       <div class="footer-bottom">
         <a href="#" class="footer-link">重要事項説明書</a>
         <p class="footer-copy">© Ohana</p>

@@ -191,6 +191,12 @@ section {
   margin-top: 7px;
 }
 
+/* PCではnav内のお問い合わせを非表示 */
+.nav-contact-btn {
+  display: none;
+}
+
+
 
 /* =========================
   ファーストビュー
@@ -365,20 +371,19 @@ section {
 
 @media screen and (max-width: 768px) {
   .section-title {
-    position: relative;
     justify-content: center;
     text-align: center;
-  }
-
-  .title-text {
-    margin: 0 auto;
+    gap: 6px;
   }
 
   .title-deco {
-    position: absolute;
-    left: 66px;   /* ← 微調整OK */
-    top: 48%;
-    transform: translateY(-50%);
+    position: static;
+    transform: none;
+    width: 32px;
+  }
+
+  .title-text {
+    margin: 0;
   }
 }
 
@@ -550,12 +555,6 @@ section {
     font-size: 22px;
   }
 
-  /* ＋を右端に */
-  .feature-number::after {
-    content: "＋";
-    margin-left: auto;
-    font-size: 28px;
-  }
 
   /* キャッチコピー（左） */
   .feature-catch {
@@ -1840,7 +1839,7 @@ section {
   .staff,
   .contact,
   .faq {
-    padding-top: 40px;
+    padding-top: 55px;
     padding-bottom: 56px;
   }
 
@@ -1851,4 +1850,81 @@ section {
   .faq {
     padding-top: 20px;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    display: block;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 24px 20px;
+    transform: translateY(-120%);
+    transition: transform 0.3s ease;
+    z-index: 9998;
+  }
+
+  .nav.open {
+    transform: translateY(0);
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-list a {
+    font-size: 18px;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  .hamburger span {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-contact-btn {
+    display: none;
+  }
+
+  .nav-contact-btn {
+    display: block;
+    width: fit-content;
+    margin: 24px auto 0;
+    padding: 10px 24px;
+    background-color: #ed7959;
+    color: #fff;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 999px;
+    letter-spacing: 0.1em;
+  }
+}
+
+.hamburger span:nth-child(1) {
+  background-color: #ed7959; /* 上 */
+}
+
+.hamburger span:nth-child(2) {
+  background-color: #f19a95; /* 真ん中 */
+}
+
+.hamburger span:nth-child(3) {
+  background-color: #f4a019; /* 下 */
 }

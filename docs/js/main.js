@@ -36,3 +36,13 @@ window.addEventListener("load", () => {
     sessionStorage.setItem("loadingShown", "true");
   }, 600);
 });
+
+const hamburger = document.querySelector(".hamburger");
+const nav = document.querySelector(".nav");
+
+if (hamburger && nav) {
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("open");
+    nav.classList.toggle("open");
+  });
+}

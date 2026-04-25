@@ -25,18 +25,28 @@
     <!-- ===== ヘッダー ===== -->
     <header class="header">
       <div class="header-inner">
-        <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="オハナ訪問看護ステーションのロゴ"></a></h1>
+        <h1 id="logo">
+          <a href="index.html"><img src="images/logo.png" alt="オハナ訪問看護ステーションのロゴ">
+          </a>
+        </h1>
+
+        <!--ハンバーガーメニュー-->
+        <button class="hamburger" aria-label="メニューを開く">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
         <nav class="nav">
           <ul class="nav-list">
-            <li><a href="#features">オハナの特徴</a></li>
-            <li><a href="#flow">ご利用の流れ</a></li>
-            <li><a href="#staff">スタッフ紹介</a></li>
+            <li><a href="index.html#features">オハナの特徴</a></li>
+            <li><a href="index.html#flow">ご利用の流れ</a></li>
+            <li><a href="index.html#staff">スタッフ紹介</a></li>
             <li><a href="./recruit.html">採用情報</a></li>
           </ul>
         </nav>
         
-        <a href="#contact" class="header-contact-btn">お問い合わせ</a>
+        <a href="index.html#contact" class="header-contact-btn">お問い合わせ</a>
       </div>
     </header>
 
@@ -170,7 +180,7 @@
                   </div>
 
                   <p class="staff-history">
-                    看護師 / 保健師 / 医療経営士 / 在宅看護指導士<br>
+                    保健師 / 医療経営士 / 在宅看護指導士<br>
                     [ 整形外科 / 循環器内科 / 心臓血管外科 / 消化器内科勤務 ]
                   </p>
                 </div>
@@ -198,7 +208,6 @@
                   </div>
 
                   <p class="staff-history">
-                    看護師<br>
                     [ 循環器内科 / 心臓血管外科勤務・訪問看護管理者 ]
                   </p>
                 </div>
@@ -226,7 +235,7 @@
                   </div>
 
                   <p class="staff-history">
-                    看護師 / 保健師 / 養護教諭 / 食生活アドバイザー<br>
+                    保健師 / 養護教諭 / 食生活アドバイザー<br>
                     [ 集中治療 / 透析 / 外来(耳鼻科・小児科)勤務 ]
                   </p>
                 </div>
@@ -248,7 +257,7 @@
       <!-- お問い合わせ -->
       <section id="contact" class="contact">
         <div class="container">
-          <h2>まずはお気軽にお問い合わせ・ご相談ください！</h2>
+          <h2>まずはお気軽に<br class="sp-only">お問い合わせ・ご相談ください！</h2>
           <div class="phone-number-image">
             <img src="images/phone.png" alt="">
           </div>
@@ -348,6 +357,8 @@
     <!-- ===== フッター ===== -->
     <footer class="footer">
       <div class="container footer-inner">
+
+        <!-- 左側：ロゴ・Instagram・詳細 -->
         <div class="footer-info">
           <div class="footer-top">
             <h2 class="footer-logo">
@@ -356,21 +367,23 @@
               </a>
             </h2>
 
-            <a
-              href="https://www.instagram.com/ohana__houkan/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="footer-instagram"
-            >
-              <img src="images/insta.png" alt="Instagram">
-            </a>
-            <p class="instagram-text">Instagram</p>
+            <div class="footer-instagram-wrap">
+              <a
+                href="https://www.instagram.com/ohana__houkan/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-instagram"
+              >
+                <img src="images/insta.png" alt="Instagram">
+              </a>
+              <p class="instagram-text">Instagram</p>
+            </div>
           </div>
 
           <div class="footer-details">
             <div class="footer-row">
               <span class="footer-badge">住所</span>
-              <p>名古屋市天白区<br>元八事3-18</p>
+              <p>名古屋市天白区<br class="sp-only">元八事3-18</p>
             </div>
 
             <div class="footer-row">
@@ -390,12 +403,20 @@
           </div>
         </div>
 
+        <!-- 右側：地図 -->
         <div class="footer-map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.2323695304135!2d136.9679021747939!3d35.125874360283056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037b26038a5c4b%3A0x2143056238505ee0!2z44CSNDY4LTAwNjYg5oSb55-l55yM5ZCN5Y-k5bGL5biC5aSp55m95Yy65YWD5YWr5LqL77yT5LiB55uu77yR77yY!5e0!3m2!1sja!2sjp!4v1776941270360!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.2323695304135!2d136.9679021747939!3d35.125874360283056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037b26038a5c4b%3A0x2143056238505ee0!2z44CSNDY4LTAwNjYg5oSb55-l55yM5ZCN5Y-k5bGL5biC5aSp55m95Yy65YWD5YWr5LqL77yT5LiB55uu77yR77yY!5e0!3m2!1sja!2sjp!4v1776941270360!5m2!1sja!2sjp"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
       </div>
+
       <div class="footer-bottom">
         <a href="#" class="footer-link">重要事項説明書</a>
         <p class="footer-copy">© Ohana</p>

@@ -39,10 +39,20 @@ window.addEventListener("load", () => {
 
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav");
+const navLinks = document.querySelectorAll(".nav a");
 
 if (hamburger && nav) {
+  // ハンバーガーボタンをクリックしたとき
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("open");
     nav.classList.toggle("open");
+  });
+
+  // メニュー内のリンクをクリックしたとき
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("open");
+      nav.classList.remove("open");
+    });
   });
 }

@@ -562,8 +562,9 @@ section {
     margin: 0;
     margin-bottom: 0;
     font-size: 20px;
-    text-align: left;
+    text-align: center;
     height: auto;
+    transform: translateX(-15px);
   }
 
   /* イラスト（右寄せ + 少し内側） */
@@ -576,9 +577,9 @@ section {
   }
 
   .feature-illustration {
-    width: 90px;
+    width: 100px;
     margin: 0;
-    transform: translateX(-10px); /* ← ここがポイント */
+    transform: translateX(-30px); /* ← ここがポイント */
   }
 
   /* 説明文（横いっぱい） */
@@ -630,6 +631,10 @@ section {
   width: 750px;
   height: auto;
   margin: 0 auto 30px;
+}
+
+.area-main-image-sp {
+  display: none;
 }
 
 .area-title {
@@ -726,10 +731,14 @@ section {
     border-radius: 20px;
   }
 
-  /* 1枚目画像 */
-  .area-main-image {
+  .area-main-image-pc {
+    display: none;
+  }
+
+  .area-main-image-sp {
+    display: block;
     width: 100%;
-    max-width: 340px;
+    max-width: 280px;
     margin: 0 auto 24px;
   }
 
@@ -1057,6 +1066,10 @@ section {
   text-align: center;
 }
 
+.phone-image-sp {
+  display: none;
+}
+
 .sp-only {
   display: none;
 }
@@ -1069,6 +1082,17 @@ section {
 
   .sp-only {
     display: inline;
+  }
+
+  .phone-image-pc {
+    display: none;
+  }
+
+  .phone-image-sp {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
   }
 }
 
@@ -1886,6 +1910,7 @@ section {
 
   .hamburger.open span:nth-child(2) {
     opacity: 0;
+    transform: scaleX(0);
   }
 
   .hamburger.open span:nth-child(3) {
@@ -1927,4 +1952,32 @@ section {
 
 .hamburger span:nth-child(3) {
   background-color: #f4a019; /* 下 */
+}
+
+.scroll-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  margin: 15px auto 20px;
+}
+
+.scroll-icon img {
+  width: 25px;
+  height: auto;
+}
+
+.page-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  width: 52px;
+}
+
+.page-top img {
+  display: block;
+  width: 90%;
+  height: auto;
 }
